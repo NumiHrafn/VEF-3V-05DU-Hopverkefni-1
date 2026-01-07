@@ -47,6 +47,9 @@
         justify-content: start;
     }
 
+    .nav {
+        justify-items: center;
+    }
     .nav a{
         text-decoration: none;
         color: #111;
@@ -114,7 +117,7 @@
 
     .hero{
         max-width: var(--max-width);
-        width: var(--max-width);
+        width: 100%;
         margin-inline: auto;
         margin: 0 auto;
         padding: 26px var(--pad);
@@ -159,7 +162,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 22px;
         max-width: var(--max-width);
-        width: var(--max-width);
+        width: 100%;
         margin-inline: auto;
     }
 
