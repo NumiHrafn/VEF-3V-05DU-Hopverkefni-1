@@ -1,3 +1,6 @@
+/* INDEX CSS */
+/* ----------------------------------------------------------------- */
+
 /* GLOBAL RESET */
 * {
     box-sizing: border-box;
@@ -179,5 +182,123 @@ a:hover {
 
     .grid-section {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* PRÓFÍLA CSS*/
+/* ----------------------------------------------------------------- */
+
+/* PROFILE PAGE LAYOUT */
+.profile-section {
+    background-color: rgba(83, 126, 72, 0.5);
+    width: 92%;
+    margin: 40px auto;
+    padding: 60px;
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* PROFILE IMAGE */
+.profile-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(201, 230, 172, 0.8);
+}
+
+/* PROFILE INFO */
+.profile-info h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.profile-list {
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+/* RANDOM MESSAGE */
+.message-box-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.message-button {
+    background-color: rgba(107, 135, 123, 0.7);
+    border: none;
+    color: #FFFFFF;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.message-button:hover {
+    background-color: rgba(107, 135, 123, 1);
+}
+
+.message-box {
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(83, 126, 72, 0.6);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.message-box.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.message-box {
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(83, 126, 72, 0.6);
+    opacity: 0;
+}
+
+.message-box.pop {
+    animation: popIn 0.4s ease forwards;
+}
+
+
+/* RESPONSIVE PROFILE */
+@media (max-width: 768px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .message-box-wrapper {
+        flex-direction: column;
+        gap: 20px;
     }
 }
