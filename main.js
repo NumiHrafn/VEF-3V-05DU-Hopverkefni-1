@@ -82,3 +82,31 @@ function animate() {
 }
 
 animate();
+
+/* RANDOM MESSAGE BUTTON (ALWAYS REPLAYS ANIMATION) */
+const messageBtn = document.getElementById("messageBtn");
+const messageBox = document.getElementById("messageBox");
+
+if (
+    messageBtn &&
+    messageBox &&
+    Array.isArray(window.profileMessages)
+) {
+    messageBtn.addEventListener("click", () => {
+        const messages = window.profileMessages;
+        const randomIndex = Math.floor(Math.random() * messages.length);
+
+        // Remove animation class completely
+        messageBox.classList.remove("pop");
+
+        // Force browser to reset animation state
+        void messageBox.offsetWidth;
+
+        // Set new message
+        messageBox.textContent = messages[randomIndex];
+
+        // Re-add animation
+        messageBox.classList.add("pop");
+    });
+}
+
