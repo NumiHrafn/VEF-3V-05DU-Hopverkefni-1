@@ -1,74 +1,101 @@
-<!doctype html>
-<html lang="is">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hópverkefni 1</title>
-  <link rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="nav">
-        <div class="nav-links">
-          <a href="index.html">Forsíða</a>
-          <a href="matthias.html">Matthías</a>
-          <a href="helena.html">Helena</a>
-          <a href="numi.html">Númi</a>
-          <a href="anton.html">Anton</a>
-        </div>
-      </div>
+
+    <!-- FIRELIES CANVAS -->
+    <canvas id="firefly-canvas"></canvas>
+
+    <!-- NAV BAR -->
+    <nav class="navbar">
+        <button class="nav-toggle" id="navToggle">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Forsíða</a></li>
+            <li><a href="profile1.html">Matthías</a></li>
+            <li><a href="profile2.html">Helena</a></li>
+            <li><a href="profile3.html">Númi</a></li>
+            <li><a href="profile4.html">Anton</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>☁︎ HÓPUR 1 ☁︎</h1>
     </header>
 
-    <section class="hero" id="home">
-      <div class="hero-title">
-        <h1>Hópur 1</h1>
-      </div>
-      <div class="hero-sub">lorem ipsum texti fyrir ofan myndirnar í &lt;section&gt;</div>
+    <!-- SECTION 1 -->
+    <section class="content-section fade-section">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur molestie, massa sed tincidunt pretium, ante augue tristique lectus, 
+            eget eleifend lectus ex sit amet mauris. Pellentesque condimentum, dolor at vulputate eleifend, ex orci luctus felis, 
+            nec pulvinar justo mauris et elit. Nullam cursus erat urna, eget euismod purus suscipit id.
+        </p>
     </section>
 
-    <main>
-      <section class="people-grid" aria-label="People grid">
-        <article class="card" id="person1">
-          <div class="thumb"><a href="matthias.html"><img src="picture-matthias.jpg" alt="Matthías"></a></div>
-          <div class="name">
-            <h3>Matthías</h3>
-          </div>
-        </article>
+    <!-- GRID SECTION -->
+    <section class="grid-section fade-section">
+        <div class="profile-card">
+            <a href="index.html"><img src="placeholder.jpeg" alt="Profile 1"></a>
+            <h3><a href="index.html">Matthías</a></h3>
+        </div>
 
-        <article class="card" id="person2">
-          <div class="thumb"><a href="helena.html"><img src="picture-helena.jpg" alt="Helena"></a></div>
-          <div class="name">
-            <h3>Helena</h3>
-          </div>
-        </article>
+        <div class="profile-card">
+            <a href="index.html"><img src="placeholder.jpeg" alt="Profile 2"></a>
+            <h3><a href="index.html">Helena</a></h3>
+        </div>
 
-        <article class="card" id="person3">
-          <div class="thumb"><a href="numi.html"><img src="picture-numi.jpg" alt="Númi"></a></div>
-          <div class="name">
-            <h3>Númi</h3>
-          </div>
-        </article>
+        <div class="profile-card">
+            <a href="index.html"><img src="placeholder.jpeg" alt="Profile 3"></a>
+            <h3><a href="index.html">Númi</a></h3>
+        </div>
 
-        <article class="card" id="person4">
-          <div class="thumb"><a href="anton.html"><img src="picture-anton.jpg" alt="Anton"></a></div>
-          <div class="name">
-            <h3>Anton</h3>
-          </div>
-        </article>
-      </section>
+        <div class="profile-card">
+            <a href="index.html"><img src="placeholder.jpeg" alt="Profile 4"></a>
+            <h3><a href="index.html">Anton</a></h3>
+        </div>
+    </section>
 
-      <section class="below-text">
-        meiri lorem ipsum texti fyrir neðan
-      </section>
-    </main>
+    <!-- SECTION 3 -->
+    <section class="content-section fade-section">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non enim turpis. 
+            Fusce vehicula lorem diam, in imperdiet libero ullamcorper vitae. Proin commodo ligula in finibus sodales. 
+            Fusce molestie tristique mauris nec molestie. Suspendisse malesuada sit amet dolor nec gravida. 
+            Aliquam urna justo, bibendum blandit lacinia in, pretium ac tellus. 
+            Donec accumsan lacinia velit, iaculis imperdiet ex ullamcorper ut. Mauris convallis ultrices nisi, vitae egestas dolor sollicitudin a. 
+            Sed enim leo, aliquet ac fermentum et, pharetra ornare urna. Vestibulum tempus aliquet lorem. 
+            Vivamus urna dui, pretium eget tortor sit amet, finibus dapibus dui.
+            <br>
+            <br>
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus ultricies metus vel ligula malesuada dictum. 
+            Nulla dolor elit, pellentesque eu elit vel, vestibulum interdum mi. Sed pulvinar erat a ex efficitur suscipit. 
+            Aliquam commodo dolor eros, pellentesque cursus elit luctus et. Pellentesque ut felis aliquet, laoreet dui et, vehicula ex. 
+            Vivamus sodales nisi sit amet lectus lacinia, ultricies bibendum metus condimentum. Nunc sollicitudin pellentesque semper. 
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+            Nunc sapien elit, tempus sed neque at, tempor sodales felis. Curabitur euismod, diam nec tempus semper, 
+            sapien odio vestibulum mauris, eget sollicitudin elit augue ac neque.
+        </p>
+    </section>
 
-    <footer>
-      <div class="footer-inner">
-        <div>MJÖG SVALUR FOOTER!!!!!!!11!!!11!1!</div>
-        <div>VEF3V05DU - 2026 - Hópur 1</div>
-      </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            HÓPUR 1
+        </div>
+
+        <div class="footer-right">
+            <p>VEFÞ3VÞ05DU</p>
+            <p>Vorönn 2026</p>
+            <p>Hópaverkefni 1</p>
+        </div>
     </footer>
-  </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
