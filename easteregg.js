@@ -83,4 +83,4 @@
   }, { passive: false });
 })();
 
-console.log("%c// some secrets are meant to be hovered", "color:#7aa89a;");
+console.log("%c// Some secrets are meant to be hovered", "color:#7aa89a;");
