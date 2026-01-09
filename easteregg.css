@@ -1,0 +1,164 @@
+/* ----------------------------- */
+/* EASTER EGG: RAINBOW MODE 🌈   */
+/* ----------------------------- */
+
+.cloud {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.cloud:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.35));
+}
+
+@keyframes rainbowText {
+    0%   { color: #ff4d4d; text-shadow: 0 0 12px rgba(255, 77, 77, 0.6); }
+    16%  { color: #ffa64d; text-shadow: 0 0 12px rgba(255, 166, 77, 0.6); }
+    33%  { color: #ffff4d; text-shadow: 0 0 12px rgba(255, 255, 77, 0.6); }
+    50%  { color: #4dff88; text-shadow: 0 0 12px rgba(77, 255, 136, 0.6); }
+    66%  { color: #4dd2ff; text-shadow: 0 0 12px rgba(77, 210, 255, 0.6); }
+    83%  { color: #a64dff; text-shadow: 0 0 12px rgba(166, 77, 255, 0.6); }
+    100% { color: #ff4dd2; text-shadow: 0 0 12px rgba(255, 77, 210, 0.6); }
+}
+
+@keyframes rainbowBg {
+    0%   { background-color: rgba(255, 77, 77, 0.45); box-shadow: 0 0 30px rgba(255, 77, 77, 0.25); }
+    16%  { background-color: rgba(255, 166, 77, 0.45); box-shadow: 0 0 30px rgba(255, 166, 77, 0.25); }
+    33%  { background-color: rgba(255, 255, 77, 0.45); box-shadow: 0 0 30px rgba(255, 255, 77, 0.25); }
+    50%  { background-color: rgba(77, 255, 136, 0.45); box-shadow: 0 0 30px rgba(77, 255, 136, 0.25); }
+    66%  { background-color: rgba(77, 210, 255, 0.45); box-shadow: 0 0 30px rgba(77, 210, 255, 0.25); }
+    83%  { background-color: rgba(166, 77, 255, 0.45); box-shadow: 0 0 30px rgba(166, 77, 255, 0.25); }
+    100% { background-color: rgba(255, 77, 210, 0.45); box-shadow: 0 0 30px rgba(255, 77, 210, 0.25); }
+}
+
+@keyframes hueWobble {
+    0%   { filter: hue-rotate(0deg) saturate(1.2); }
+    50%  { filter: hue-rotate(180deg) saturate(1.6); }
+    100% { filter: hue-rotate(360deg) saturate(1.2); }
+}
+
+body.rainbow-mode .page-header h1,
+body.rainbow-mode .navbar a,
+body.rainbow-mode .content-section,
+body.rainbow-mode .grid-section,
+body.rainbow-mode .profile-section,
+body.rainbow-mode .footer,
+body.rainbow-mode .profile-info,
+body.rainbow-mode .profile-list,
+body.rainbow-mode p,
+body.rainbow-mode h2,
+body.rainbow-mode h3 {
+    animation: rainbowText 4s linear infinite;
+}
+
+body.rainbow-mode .page-header,
+body.rainbow-mode .content-section,
+body.rainbow-mode .grid-section,
+body.rainbow-mode .profile-section,
+body.rainbow-mode .navbar,
+body.rainbow-mode .footer,
+body.rainbow-mode .message-box {
+    animation: rainbowBg 5s linear infinite;
+}
+
+body.rainbow-mode {
+    animation: hueWobble 8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.rainbow-mode * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ----------------------------- */
+/* EASTER EGG: STORM MODE 🌩️     */
+/* ----------------------------- */
+
+#lightning-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10000;
+    background: radial-gradient(circle at 30% 20%,
+        rgba(255,255,255,0.95),
+        rgba(255,255,255,0.35) 35%,
+        rgba(255,255,255,0.0) 70%);
+    mix-blend-mode: screen;
+}
+
+body.storm-mode::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0.22;
+    background: repeating-linear-gradient(
+        120deg,
+        rgba(255,255,255,0.10) 0px,
+        rgba(255,255,255,0.10) 1px,
+        rgba(255,255,255,0.00) 10px,
+        rgba(255,255,255,0.00) 22px
+    );
+    animation: stormRainMove 1.4s linear infinite;
+}
+
+@keyframes stormRainMove {
+    0%   { transform: translate3d(-10px, -10px, 0); }
+    100% { transform: translate3d(40px, 40px, 0); }
+}
+
+body.storm-mode {
+    filter: brightness(0.72) contrast(1.15) saturate(0.85);
+}
+
+body.storm-mode .page-header,
+body.storm-mode .content-section,
+body.storm-mode .grid-section,
+body.storm-mode .profile-section,
+body.storm-mode .navbar,
+body.storm-mode .footer {
+    background-color: rgba(30, 45, 40, 0.68) !important;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+}
+
+body.storm-mode h1,
+body.storm-mode h2,
+body.storm-mode h3,
+body.storm-mode p,
+body.storm-mode li,
+body.storm-mode a {
+    color: rgba(230, 245, 255, 0.92) !important;
+    text-shadow: 0 0 10px rgba(140, 200, 255, 0.18);
+}
+
+body.storm-mode .profile-card img:hover,
+body.storm-mode .profile-image img:hover {
+    box-shadow: 0 0 28px rgba(140, 200, 255, 0.35);
+}
+
+body.storm-mode {
+    background-blend-mode: multiply;
+}
+
+body.storm-mode #firefly-canvas {
+    filter: brightness(1.25) saturate(1.1);
+}
+
+#lightning-overlay.flash {
+    animation: lightningFlash 0.22s ease-out;
+}
+
+@keyframes lightningFlash {
+    0%   { opacity: 0; transform: scale(1); }
+    15%  { opacity: 0.95; transform: scale(1.02); }
+    45%  { opacity: 0.25; transform: scale(1); }
+    100% { opacity: 0; }
+}
