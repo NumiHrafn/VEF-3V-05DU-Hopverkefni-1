@@ -83,7 +83,7 @@ function animate() {
 
 animate();
 
-/* RANDOM MESSAGE BUTTON (ALWAYS REPLAYS ANIMATION) */
+/* RANDOM MESSAGE BUTTON (LIST IN HTML) */
 const messageBtn = document.getElementById("messageBtn");
 const messageBox = document.getElementById("messageBox");
 
@@ -110,3 +110,49 @@ if (
     });
 }
 
+/* BUG BOUNCE WALK */
+const bug = document.getElementById("bug");
+const container = bug?.parentElement;
+
+let bugAnimId = null;
+
+if (bug && container) {
+    let x = 0;
+    const speed = 0.8;
+    let direction = 1;
+
+    function moveBug() {
+        const containerWidth = container.clientWidth;
+        const bugWidth = bug.offsetWidth;
+
+        x += speed * direction;
+
+        // Right wall
+        if (x + bugWidth >= containerWidth) {
+            x = containerWidth - bugWidth;
+            direction = -1;
+            bug.style.transform = "rotate(180deg)";
+        }
+
+        // Left wall
+        if (x <= 0) {
+            x = 0;
+            direction = 1;
+            bug.style.transform = "rotate(0deg)";
+        }
+
+        bug.style.left = `${x}px`;
+        bugAnimId = requestAnimationFrame(moveBug);
+    }
+
+    // Stop any existing loop before starting a new one
+    if (bugAnimId) {
+        cancelAnimationFrame(bugAnimId);
+    }
+
+    // Start cleanly
+    requestAnimationFrame(() => {
+        x = 0;
+        moveBug();
+    });
+}

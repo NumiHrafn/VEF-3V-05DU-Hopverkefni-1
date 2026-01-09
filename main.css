@@ -173,6 +173,7 @@ a:hover {
         display: block;
         align-self: flex-end;
         margin-bottom: 10px;
+        color: #B1BEB7;
     }
 
     .nav-links {
@@ -307,4 +308,41 @@ a:hover {
         flex-direction: column;
         gap: 20px;
     }
+}
+
+
+/* BUG WALKING (JS CONTROLLED) */
+/* ----------------------------------------------------------------- */
+
+.bug-walk-container {
+    background-color: rgba(107, 135, 123, 0.7);
+    width: 100%;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.bug {
+    position: absolute;
+    left: 0;
+    font-size: 3.4rem;
+    padding-bottom: 50px;
+
+    transform-origin: center;
+
+    /* remove translateY */
+    animation: bug-walk 1s ease-in-out infinite;
+}
+
+
+@keyframes bug-walk {
+    0%   { rotate: 80deg; }
+    50%  { rotate: 80deg; }
+    51%  { rotate: 98deg; }
+    100% { rotate: 98deg; }
 }
