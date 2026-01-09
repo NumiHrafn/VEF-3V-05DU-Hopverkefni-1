@@ -162,6 +162,12 @@ a:hover {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1440px) {
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -182,12 +188,6 @@ a:hover {
 
     .grid-section {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 1440px) {
-    .grid-section {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
