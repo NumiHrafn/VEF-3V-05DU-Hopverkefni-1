@@ -310,6 +310,46 @@ a:hover {
     }
 }
 
+/*numi profile */
+
+
+.hal-section{
+    background-color: rgba(83, 126, 72, 0.5);
+    margin: 40px auto;
+    padding: 50px;
+    width: 92%;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hal-9000{
+    text-align: center;
+}
+
+.hal{
+    width: 5%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.hal-9000 p {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hal:hover + p{
+        opacity: 1;
+}
+
+.hal-section:has(.hal:hover) {
+    background-color: rgba(48, 55, 47, 0.8);
+}
+
 
 /* BUG WALKING (JS CONTROLLED) */
 /* ----------------------------------------------------------------- */
