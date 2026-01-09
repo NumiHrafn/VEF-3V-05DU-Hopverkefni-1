@@ -100,8 +100,8 @@ a:hover {
     border-radius: 15px;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
 }
 
 .profile-card {
@@ -182,6 +182,12 @@ a:hover {
 
     .grid-section {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1440px) {
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
