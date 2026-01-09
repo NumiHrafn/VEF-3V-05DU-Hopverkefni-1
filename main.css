@@ -342,9 +342,8 @@ a:hover {
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.hal-9000:hover p {
-    opacity: 1;
-    
+.hal:hover + p{
+        opacity: 1;
 }
 
 .hal-section:has(.hal:hover) {
